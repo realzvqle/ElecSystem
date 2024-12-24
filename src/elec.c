@@ -97,11 +97,11 @@ void StrengthAdderCli(elecconnection* con){
 }
 
 int main(){
-    elec elecc = {GenRanNumRange(GetMS(), 0, 30)};
+    elec elecc = {3};
     
 
-    elec selec = {GenRanNumRange(GetMS(), 0, 30)};
-    elecconnection con = ConnectElecs(&elecc, &selec, GenRanNumRange(GetMS(), 0, 30));
+    elec selec = {2};
+    elecconnection con = ConnectElecs(&elecc, &selec, 1);
     StrengthAdderCli(&con);
     DisconnectElecs(&con);
 }
